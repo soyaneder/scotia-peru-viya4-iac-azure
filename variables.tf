@@ -531,8 +531,8 @@ variable "netapp_size_in_tb" {
   default     = 4
 
   validation {
-    condition     = var.netapp_size_in_tb != null ? var.netapp_size_in_tb >= 4 && var.netapp_size_in_tb <= 500 : null
-    error_message = "ERROR: netapp_size_in_tb - value must be between 4 and 500."
+    condition     = var.netapp_size_in_tb != null ? var.netapp_size_in_tb >= 1 && var.netapp_size_in_tb <= 500 : null
+    error_message = "ERROR: netapp_size_in_tb - value must be between 1 and 500."
   }
 }
 
